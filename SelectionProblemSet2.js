@@ -147,3 +147,5 @@ else
 {
     max=result4;
 }
+console.log(`Max Element ${max}`);
+console.log(`Min Element ${min}`);
