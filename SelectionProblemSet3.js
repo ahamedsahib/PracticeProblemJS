@@ -100,55 +100,26 @@ default:
     console.log("Enter the correct number");
 }
 //UC4
-let num1 =  Number(prompt("Enter number 1:"));
-let num2 = Number(prompt("Enter number 2:"));
-let num3 = Number(prompt("Enter number 3:"));
-
-let result1 = (num1+num2)*num3;
-let result2 = (num1%num2)+num3;
-let result3 = (num3+num1)/num2;
-let result4 = (num1*num2)+num3;
-    
-let max=0,min=0;
-let option=prompt("Type max to find maximum result or min to find minimum result")
-switch(option){
-    case 'min':
-        if(result1<result2 && result1<result3 && result1<result4)
-        {
-            min=result1;
-        }
-        else if(result2<result1 && result2<result3 && result2<result4)
-        {
-             min=result2;
-        }
-        else if(result3<result1 && result3<result2 && result3<result4)
-        {
-            min=result3;
-        }
-        else
-        {
-            min=result4;
-        }
-        console.log(`Min Element ${min}`);
-    case 'max':
-        if(result1>result2 && result1>result3 && result1>result4)
-        {
-            max=result1;
-        }
-        else if(result2>result3 && result2>result4 && result2>result1)
-        {
-            max=result2;
-        }
-        else if(result3>result1 && result3>result2 && result3>result4)
-        {
-            max=result3;
-        }
-        else
-        {
-            max=result4;
-        }
-        console.log(`Max Element ${max}`);
+console.log("1.Feet to Inch\n2.Feet to Meter\n3.Inch to Feet\n4.Meter to Feet");
+switch(Number(prompt('Enter the Choice: ')))
+{
+    case 1:
+        let feet = Number(prompt('Enter the feets: '));
+        console.log(` ${feet} feets = ${feet*12} inches`);
+        break;
+    case 2:
+        let feets = Number(prompt('Enter the feets: '));
+        console.log(` ${feets} feets = ${feets/3.281} meter`);
+        break;
+    case 3:
+        let inch = Number(prompt('Enter the inches: '));
+        console.log(` ${inch} inches = ${inch/12} feets`);
+        break;
+    case 4:
+        let meter = Number(prompt('Enter the meter: '));
+        console.log(` ${meter} meters = ${meter*3.281} feets`);
+        break;
     default:
-        console.log('choose correct one');
+        console.log("Enter the correct value");
+        break;
 }
-
